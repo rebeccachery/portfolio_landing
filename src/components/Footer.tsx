@@ -9,7 +9,7 @@ export function Footer() {
         <div className="footer-col">
           <h3>Rebecca Chery</h3>
           <p style={{ color: '#CBD5E1', fontSize: '0.875rem' }}>
-            © {currentYear} Full-Stack Engineer. Available for contract work.
+            © {currentYear} Full-Stack Engineer. Available for collaboration.
           </p>
         </div>
         
@@ -26,7 +26,7 @@ export function Footer() {
           <h3>Socials</h3>
           <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-2)' }}>
             <a 
-              href="https://github.com" 
+              href="https://github.com/rebeccachery" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="GitHub"
@@ -35,7 +35,7 @@ export function Footer() {
               <Github size={24} />
             </a>
             <a 
-              href="https://linkedin.com" 
+              href="https://linkedin.com/in/rebeccachery" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="LinkedIn"
@@ -44,7 +44,7 @@ export function Footer() {
               <Linkedin size={24} />
             </a>
             <a 
-              href="https://twitter.com" 
+              href="https://twitter.com/rebecca_builds" 
               target="_blank" 
               rel="noopener noreferrer"
               aria-label="Twitter"
@@ -53,7 +53,7 @@ export function Footer() {
               <Twitter size={24} />
             </a>
             <a 
-              href="mailto:your@email.com"
+              href="mailto:rebecca.rebeccachery.chery198@gmail.com"
               aria-label="Email"
               style={{ color: '#CBD5E1' }}
             >

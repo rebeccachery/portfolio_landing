@@ -2,25 +2,32 @@ import { Calendar } from "lucide-react";
 
 const experiences = [
   {
-    title: "Senior Full-Stack Engineer",
-    company: "Tech Company",
-    period: "2022 - Present",
-    description: "Led development of cloud-native applications using React, Node.js, and AWS. Architected microservices handling millions of requests daily.",
-    skills: ["React", "Node.js", "PostgreSQL", "AWS", "Docker"]
+    title: "Contract Full-Stack Engineer",
+    company: "Consulting Clients (via TEKsystems & Upwork)",
+    period: "2023 - Present",
+    description: "Delivered end-to-end full-stack applications and AI-powered tools for nonprofits and mission-driven organizations, completing 15+ projects from ideation to production with consistent on-time delivery. Collaborated with RUXAILAB on AI-supported usability evaluation tooling for remote user testing, and built accessible WordPress platforms and custom digital solutions for advocacy and nonprofit organizations, including Out in Tech.",
+    skills: ["React", "TypeScript", "Python", "AWS", "Docker", "PostgreSQL", "Data Pipelines"]
   },
   {
-    title: "Full-Stack Developer",
-    company: "Startup Inc.",
-    period: "2020 - 2022",
-    description: "Built scalable web applications from scratch. Implemented CI/CD pipelines and improved deployment efficiency by 40%.",
-    skills: ["Vue.js", "Python", "MongoDB", "GCP", "Kubernetes"]
+    title: "Software Engineer Intern",
+    company: "WarnerMedia",
+    period: "2021 - 2021",
+    description: "Enhanced internal deployment tooling for the HBO Max platform, enabling live branch builds and continuous deployment workflows that reduced deployment request times by more than 50 minutes.",
+    skills: ["TypeScript", "Python", "AWS", "Node.js", "CI/CD", "Kubernetes"]
   },
   {
-    title: "Software Engineer",
-    company: "Digital Agency",
-    period: "2018 - 2020",
-    description: "Developed custom web solutions for clients across various industries. Collaborated with design teams to create pixel-perfect implementations.",
-    skills: ["JavaScript", "React", "Express", "MySQL", "Redis"]
+    title: "Software Development Engineer Intern",
+    company: "Amazon",
+    period: "2020 - 2020",
+    description: "Implemented a send-to-curator playlist feature for an internal playlist publishing platform, contributing to a 20% increase in playlist submissions within the first month.",
+    skills: ["Ruby on Rails", "React", "MySQL", "Redis", "REST APIs"]
+  },
+  {
+    title: "Software Development Engineer Intern",
+    company: "Amazon",
+    period: "2019 - 2019",
+    description: "Developed scalable internal services for analyzing performance metrics across Amazon Music stations, enabling teams to better evaluate station quality and listener engagement.",
+    skills: ["Java","MySQL", "REST APIs", "Agile Methodologies", "Data Analytics"]
   }
 ];
 

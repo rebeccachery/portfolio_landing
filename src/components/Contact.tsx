@@ -37,9 +37,9 @@ export function Contact() {
       <div className="contact-container">
         <div className="card">
           <div style={{ marginBottom: 'var(--space-4)' }}>
-            <h3 style={{ fontSize: '1.5rem', marginBottom: 'var(--space-2)' }}>Available for Contract Work</h3>
+            <h3 style={{ fontSize: '1.5rem', marginBottom: 'var(--space-2)' }}>Open to Collaborations & Select Work</h3>
             <p className="text-slate-600">
-              Looking for a full-stack engineer for your next project? Let's discuss how I can help bring your ideas to life.
+              Building something in AI, language, or storytelling? I’m always open to connecting, collaborating, or contributing to projects that push those spaces forward
             </p>
           </div>
           

@@ -15,13 +15,13 @@ export function Hero() {
         </div>
         
         <h1>
-          Building Digital Experiences &<br />
-          Animated Stories
+          Where AI meets Language &<br />
+          Storytelling
         </h1>
         
         <p>
-          Full-stack engineer specializing in scalable web applications, with a passion for 
-          edutainment through animated short films. Available for contract work.
+          Full-stack engineer and founder of PolyFlow, designing intelligent systems for language learning, 
+          animated content, and global communication.
         </p>
         
         <div className="hero-actions">

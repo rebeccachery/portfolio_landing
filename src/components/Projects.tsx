@@ -2,27 +2,35 @@ import { ExternalLink, Github } from "lucide-react";
 
 const projects = [
   {
-    title: "E-Commerce Platform",
-    description: "Built a full-featured e-commerce platform with real-time inventory management, payment processing, and admin dashboard.",
+    title: "Semantic Mind Map from Voice Memos",
+    description: "Built an AI tool that converts voice memos into structured mind maps by transcribing audio and extracting key ideas into editable nodes.",
     image: "https://images.unsplash.com/photo-1569693799105-4eb645d89aea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0fGVufDF8fHx8MTc2MjkxNDAyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    tech: ["React", "Node.js", "Stripe", "PostgreSQL"],
+    tech: ["React", "Next.js", "TypeScript", "Tailwind", "OpenAI API"],
     githubUrl: "#",
     liveUrl: "#"
   },
   {
-    title: "Task Management SaaS",
-    description: "Collaborative task management tool with real-time updates, team workspaces, and advanced filtering capabilities.",
+    title: "ISTWA: History in Motion",
+    description: "Developed ISTWA as an animated historical narrative, using the landing page to frame the Haitian Revolution through story and visual design.",
     image: "https://images.unsplash.com/photo-1660810731526-0720827cbd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc2Mjk4NDIzMnww&ixlib=rb-4.1.0&q=80&w=1080",
-    tech: ["Next.js", "TypeScript", "Supabase", "Tailwind"],
-    githubUrl: "#",
-    liveUrl: "#"
+    tech: ["Blender", "C", "Python", "Adobe After Effects", "CLI Tools", "WebGL"],
+    githubUrl: "https://github.com/rebeccachery/istwa-landing",
+    liveUrl: "https://istwa-site.vercel.app"
   },
   {
-    title: "Analytics Dashboard",
-    description: "Real-time analytics dashboard with customizable widgets, data visualization, and export functionality.",
-    image: "https://images.unsplash.com/photo-1569693799105-4eb645d89aea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0fGVufDF8fHx8MTc2MjkxNDAyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    tech: ["Vue.js", "Python", "FastAPI", "MongoDB"],
-    githubUrl: "#",
+    title: "SandwichBot: Autonomous PB&J-Making Robot",
+    description: "Built an autonomous robotic system that used LLM-based task planning and control systems to execute multi-step sandwich-making with reliable real-world manipulation under tight constraints.",
+    image: "https://images.unsplash.com/photo-1660810731526-0720827cbd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc2Mjk4NDIzMnww&ixlib=rb-4.1.0&q=80&w=1080",
+    tech: ["Python", "Hugging Face", "PyTorch",  "Computer Vision", "LeRobot", "RunPod", "LLM Orchestration"],
+    githubUrl: "https://devpost.com/software/sandwichbot",
+    liveUrl: "https://www.youtube.com/watch?v=Cmi9NBAELjs&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F"
+  },
+  {
+    title: "Haitian Translator Audio Splitter",
+    description: "Developed a Haitian Creole audio segmentation pipeline using speech recognition and audio processing techniques to transform raw recordings into structured, translatable clips for downstream NLP tasks.",
+    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
+    tech: ["Python", "Whisper / ASR", "Audio Processing",  "NLP", "Hugging Face", "PyDub"],
+    githubUrl: "https://github.com/rebeccachery/haitian-translator-audiosplitter",
     liveUrl: "#"
   }
 ];
