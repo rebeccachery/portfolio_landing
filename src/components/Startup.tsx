@@ -6,7 +6,7 @@ export function Startup() {
       <h2 className="section-title">PolyFlow</h2>
       
       <div className="startup-grid">
-        <div>
+        <div className="startup-content">
           <h3>Real-time Intelligence Layer for Human Communication</h3>
           <p className="text-slate-600" style={{ marginBottom: 'var(--space-4)' }}>
             An early-stage AI speech + alignment system exploring multilingual learning and pronunciation feedback for under-resourced language learners
@@ -47,8 +47,8 @@ export function Startup() {
         
         <div className="startup-visual">
           <img 
-            src="https://images.unsplash.com/photo-1648014613911-e355dc51e2e3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhbmltYXRlZCUyMGZpbG0lMjBwcm9kdWN0aW9ufGVufDF8fHx8MTc2Mjk4NDIzMnww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Animation production"
+            src="/polyflow_graphic.png"
+            alt="Abstract 3D Multilingual AI Speech processing visualization"
           />
         </div>
       </div>
