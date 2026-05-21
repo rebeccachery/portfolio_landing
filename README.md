@@ -1,5 +1,18 @@
 # React + TypeScript + Vite
 
+## Contact form Supabase setup
+
+The contact form writes submissions to the `collaborations` table in Supabase. Add these environment variables locally in `.env.local` and in your deployment provider before building:
+
+```bash
+VITE_SUPABASE_URL=https://swkippmsoyffbzvaagrp.supabase.co
+VITE_SUPABASE_ANON_KEY=your_supabase_publishable_or_anon_key
+```
+
+`VITE_SUPABASE_PUBLISHABLE_KEY` is also supported if your Supabase dashboard shows the newer publishable key name.
+
+After changing Vite environment variables, restart the dev server or trigger a fresh production deploy.
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:

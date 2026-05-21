@@ -6,8 +6,8 @@ const projects = [
     description: "Built an AI tool that converts voice memos into structured mind maps by transcribing audio and extracting key ideas into editable nodes.",
     image: "https://images.unsplash.com/photo-1569693799105-4eb645d89aea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0fGVufDF8fHx8MTc2MjkxNDAyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
     tech: ["React", "Next.js", "TypeScript", "Tailwind", "OpenAI API"],
-    githubUrl: "#",
-    liveUrl: "#"
+    githubUrl: "https://github.com/rebeccachery/semantic_mind_map_tool",
+    liveUrl: "https://github.com/rebeccachery/semantic_mind_map_tool"
   },
   {
     title: "ISTWA: History in Motion",
