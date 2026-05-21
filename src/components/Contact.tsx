@@ -37,7 +37,6 @@ export function Contact() {
       }
 
       toast.success("Message sent successfully! I'll get back to you soon.");
-
       setFormData({ name: "", email: "", company: "", message: "" });
 
     } catch (error) {
