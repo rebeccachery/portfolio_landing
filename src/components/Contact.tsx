@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
+import { supabase } from "../lib/supabase";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -15,12 +16,31 @@ export function Contact() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    toast.success("Message sent successfully! I'll get back to you soon.");
-    setFormData({ name: "", email: "", company: "", message: "" });
-    setIsSubmitting(false);
+    try {
+      const { error } = await supabase
+        .from("collaborations")
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          company: formData.company || null,
+          message: formData.message
+        }]);
+      if (error) {
+        console.error(error);
+        toast.error("Failed to send message. Please try again.");
+        return;
+      }
+
+      toast.success("Message sent successfully! I'll get back to you soon.");
+
+      setFormData({ name: "", email: "", company: "", message: "" });
+
+    } catch (error) {
+      console.error(error);
+      toast.error("Failed to send message. Please try again.");
+    } finally {
+      setIsSubmitting(false);
+    } 
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
