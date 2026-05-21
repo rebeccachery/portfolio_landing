@@ -5,6 +5,7 @@ import { Projects } from "./components/Projects";
 import { Startup } from "./components/Startup";
 import { Contact } from "./components/Contact";
 import { Footer } from "./components/Footer";
+import { Toaster } from "sonner";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Startup />
       <Contact />
       <Footer />
+      <Toaster richColors position="top-right" />
     </div>
   );
 }

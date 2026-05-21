@@ -63,14 +63,28 @@ export function Projects() {
               </div>
             </div>
             <div className="project-actions">
-              <button className="btn btn-outline" style={{ width: '100%' }}>
+              <a
+                className="btn btn-outline"
+                href={project.githubUrl}
+                target="_blank"
+                rel="noreferrer"
+                style={{ width: '100%' }}
+                aria-label={`View code for ${project.title}`}
+              >
                 <Github size={16} />
                 Code
-              </button>
-              <button className="btn btn-outline" style={{ width: '100%' }}>
+              </a>
+              <a
+                className="btn btn-outline"
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                style={{ width: '100%' }}
+                aria-label={`View live project for ${project.title}`}
+              >
                 <ExternalLink size={16} />
                 Live
-              </button>
+              </a>
             </div>
           </div>
         ))}

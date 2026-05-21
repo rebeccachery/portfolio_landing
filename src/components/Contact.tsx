@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Send } from "lucide-react";
 import { toast } from "sonner";
-import { supabase } from "../lib/supabase";
+import { isSupabaseConfigured, supabase } from "../lib/supabase";
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -17,6 +17,11 @@ export function Contact() {
     setIsSubmitting(true);
     
     try {
+      if (!isSupabaseConfigured || !supabase) {
+        toast.error("Contact form is not configured yet.");
+        return;
+      }
+
       const { error } = await supabase
         .from("collaborations")
         .insert([{
