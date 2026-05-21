@@ -31,7 +31,7 @@ const projects = [
     image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
     tech: ["Python", "Whisper / ASR", "Audio Processing",  "NLP", "Hugging Face", "PyDub"],
     githubUrl: "https://github.com/rebeccachery/haitian-translator-audiosplitter",
-    liveUrl: "#"
+    liveUrl: "https://github.com/rebeccachery/haitian-translator-audiosplitter"
   }
 ];
 
