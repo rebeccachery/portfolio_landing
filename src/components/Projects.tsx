@@ -32,6 +32,38 @@ const projects = [
     tech: ["Python", "Whisper / ASR", "Audio Processing",  "NLP", "Hugging Face", "PyDub"],
     githubUrl: "https://github.com/rebeccachery/haitian-translator-audiosplitter",
     liveUrl: "https://github.com/rebeccachery/haitian-translator-audiosplitter"
+  },
+  {
+    title: "Play-by-Ear Music Instrument Tutor",
+    description: "Created an AI-powered music tutor that listens to a student's performance and provides real-time feedback on pitch, rhythm, and technique using audio processing and machine learning models.",
+    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
+    tech: ["Python", "Audio Processing", "Machine Learning", "Hugging Face", "PyTorch"],
+    githubUrl: "https://github.com/rebeccachery/play-by-ear-music-tutor",
+    liveUrl: "https://github.com/rebeccachery/play-by-ear-music-tutor"
+  },
+  {
+    title: "Audio Memory Map",
+    description: "Spatial audio mapping app for recording, transcribing, and attaching voice memories to real-world locations on an interactive map, using ASR and geolocation technologies to create a personalized audio diary experience.",
+    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
+    tech: ["React Native", "FastAPI", "Python", "ASR", "PostgreSQL", "Audio Processing"],
+    githubUrl: "https://github.com/rebeccachery/audio-memory-map",
+    liveUrl: "https://github.com/rebeccachery/audio-memory-map"
+  },
+  {
+    title: "Interactive Maps",
+    description: "Interactive NYC map highlighting Haitian population density and educational support gaps using Census and NYC Open Data, built with React and Mapbox GL to visualize disparities and inform community advocacy efforts.",
+    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
+    tech: ["React", "Next.js", "Plotly", "JavaScript", "Data Visualization", "GeoJSON"],
+    githubUrl: "https://github.com/rebeccachery/nyc_map",
+    liveUrl: "https://github.com/rebeccachery/nyc_map"
+  },
+  {
+    title: "PolyFlow Demos",
+    description: "Demos showcasing PolyFlow's capabilities in multi-agent coordination, task planning, and LLM orchestration for complex workflows, including voice-based learning, automated flashcard generation, and lesson plan transformation.",
+    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
+    tech: ["Python", "JavaScript", "LLM Orchestration", "Multi-Agent Systems", "Task Planning"],
+    githubUrl: "https://github.com/rebeccachery/polyflow-demo",
+    liveUrl: "https://github.com/rebeccachery/polyflow-demo"
   }
 ];
 
