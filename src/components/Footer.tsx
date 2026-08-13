@@ -1,63 +1,60 @@
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Mail, Twitter } from "lucide-react";
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-  
+  const year = new Date().getFullYear();
+
   return (
     <footer className="footer">
-      <div className="footer-grid">
-        <div className="footer-col">
-          <h3>Rebecca Chery</h3>
-          <p style={{ color: '#CBD5E1', fontSize: '0.875rem' }}>
-            © {currentYear} Full-Stack Engineer. Available for collaboration.
-          </p>
-        </div>
-        
-        <div className="footer-col">
-          <h3>Links</h3>
-          <div className="footer-links">
-            <a href="#experience">Experience</a>
-            <a href="#projects">Projects</a>
-            <a href="#startup">Startup</a>
+      <div className="footer-inner">
+        <div className="footer-top">
+          <div>
+            <p className="footer-brand">Rebecca Chery</p>
+            <p className="footer-note">
+              Currently building Polyflow, learning Rust, and making questionable
+              decisions involving robots and audio pipelines.
+            </p>
           </div>
+          <ul className="footer-links">
+            <li><a href="#work">Work</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#lab">Lab</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
         </div>
-        
-        <div className="footer-col">
-          <h3>Socials</h3>
-          <div style={{ display: 'flex', gap: 'var(--space-4)', marginTop: 'var(--space-2)' }}>
-            <a 
-              href="https://github.com/rebeccachery" 
-              target="_blank" 
+
+        <div className="footer-bottom">
+          <p>© {year} Rebecca Chery</p>
+          <div className="footer-socials">
+            <a
+              href="https://github.com/rebeccachery"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub"
-              style={{ color: '#CBD5E1' }}
             >
-              <Github size={24} />
+              <Github size={18} />
             </a>
-            <a 
-              href="https://linkedin.com/in/rebeccachery" 
-              target="_blank" 
+            <a
+              href="https://linkedin.com/in/rebeccachery"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn"
-              style={{ color: '#CBD5E1' }}
             >
-              <Linkedin size={24} />
+              <Linkedin size={18} />
             </a>
-            <a 
-              href="https://twitter.com/rebecca_builds" 
-              target="_blank" 
+            <a
+              href="https://twitter.com/rebecca_builds"
+              target="_blank"
               rel="noopener noreferrer"
               aria-label="Twitter"
-              style={{ color: '#CBD5E1' }}
             >
-              <Twitter size={24} />
+              <Twitter size={18} />
             </a>
-            <a 
+            <a
               href="mailto:rebecca.rebeccachery.chery198@gmail.com"
               aria-label="Email"
-              style={{ color: '#CBD5E1' }}
             >
-              <Mail size={24} />
+              <Mail size={18} />
             </a>
           </div>
         </div>

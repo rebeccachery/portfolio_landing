@@ -1,125 +1,145 @@
-import { ExternalLink, Github } from "lucide-react";
+import { scrollToId } from "../lib/scroll";
 
-const projects = [
+type Project = {
+  num: string;
+  title: string;
+  problem: string;
+  built: string;
+  learned: string;
+  tech: string[];
+  href?: string;
+  anchor?: string;
+};
+
+const projects: Project[] = [
   {
-    title: "Semantic Mind Map from Voice Memos",
-    description: "Built an AI tool that converts voice memos into structured mind maps by transcribing audio and extracting key ideas into editable nodes.",
-    image: "https://images.unsplash.com/photo-1569693799105-4eb645d89aea?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2RpbmclMjBwcm9qZWN0fGVufDF8fHx8MTc2MjkxNDAyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    tech: ["React", "Next.js", "TypeScript", "Tailwind", "OpenAI API"],
-    githubUrl: "https://github.com/rebeccachery/semantic_mind_map_tool",
-    liveUrl: "https://github.com/rebeccachery/semantic_mind_map_tool"
+    num: "01",
+    title: "Polyflow",
+    problem: "Speech AI largely skips under-resourced languages like Haitian Creole.",
+    built: "An AI speech platform with dataset pipelines, production SaaS, and Echo for pronunciation practice.",
+    learned: "Product demand shows up when you talk to learners and educators — then ship something they can try.",
+    tech: ["FastAPI", "Next.js", "PostgreSQL", "Redis", "ASR"],
+    anchor: "startup",
   },
   {
-    title: "ISTWA: History in Motion",
-    description: "Developed ISTWA as an animated historical narrative, using the landing page to frame the Haitian Revolution through story and visual design.",
-    image: "https://images.unsplash.com/photo-1660810731526-0720827cbd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc2Mjk4NDIzMnww&ixlib=rb-4.1.0&q=80&w=1080",
-    tech: ["Blender", "C", "Python", "Adobe After Effects", "CLI Tools", "WebGL"],
-    githubUrl: "https://github.com/rebeccachery/istwa-landing",
-    liveUrl: "https://istwa-site.vercel.app"
+    num: "02",
+    title: "Semantic Audio Map",
+    problem: "Voice memos are hard to organize into actionable structure.",
+    built: "A voice-to-graph pipeline that transcribes audio and extracts editable mind-map nodes.",
+    learned: "Structured LLM outputs plus an interactive canvas make human-in-the-loop refinement practical.",
+    tech: ["React Flow", "Next.js", "TypeScript", "Whisper", "GPT-4o-mini"],
+    href: "https://github.com/rebeccachery/semantic_mind_map_tool",
   },
   {
-    title: "SandwichBot: Autonomous PB&J-Making Robot",
-    description: "Built an autonomous robotic system that used LLM-based task planning and control systems to execute multi-step sandwich-making with reliable real-world manipulation under tight constraints.",
-    image: "https://images.unsplash.com/photo-1660810731526-0720827cbd38?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzb2Z0d2FyZSUyMGVuZ2luZWVyJTIwd29ya3NwYWNlfGVufDF8fHx8MTc2Mjk4NDIzMnww&ixlib=rb-4.1.0&q=80&w=1080",
-    tech: ["Python", "Hugging Face", "PyTorch",  "Computer Vision", "LeRobot", "RunPod", "LLM Orchestration"],
-    githubUrl: "https://devpost.com/software/sandwichbot",
-    liveUrl: "https://www.youtube.com/watch?v=Cmi9NBAELjs&source_ve_path=OTY3MTQ&embeds_referring_euri=https%3A%2F%2Fdevpost.com%2F"
-  },
-  {
-    title: "Haitian Translator Audio Splitter",
-    description: "Developed a Haitian Creole audio segmentation pipeline using speech recognition and audio processing techniques to transform raw recordings into structured, translatable clips for downstream NLP tasks.",
-    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
-    tech: ["Python", "Whisper / ASR", "Audio Processing",  "NLP", "Hugging Face", "PyDub"],
-    githubUrl: "https://github.com/rebeccachery/haitian-translator-audiosplitter",
-    liveUrl: "https://github.com/rebeccachery/haitian-translator-audiosplitter"
-  },
-  {
-    title: "Play-by-Ear Music Instrument Tutor",
-    description: "Created an AI-powered music tutor that listens to a student's performance and provides real-time feedback on pitch, rhythm, and technique using audio processing and machine learning models.",
-    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
-    tech: ["Python", "Audio Processing", "Machine Learning", "Hugging Face", "PyTorch"],
-    githubUrl: "https://github.com/rebeccachery/play-by-ear-music-tutor",
-    liveUrl: "https://github.com/rebeccachery/play-by-ear-music-tutor"
-  },
-  {
+    num: "03",
     title: "Audio Memory Map",
-    description: "Spatial audio mapping app for recording, transcribing, and attaching voice memories to real-world locations on an interactive map, using ASR and geolocation technologies to create a personalized audio diary experience.",
-    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
-    tech: ["React Native", "FastAPI", "Python", "ASR", "PostgreSQL", "Audio Processing"],
-    githubUrl: "https://github.com/rebeccachery/audio-memory-map",
-    liveUrl: "https://github.com/rebeccachery/audio-memory-map"
+    problem: "Personal audio memories lose place and context over time.",
+    built: "A spatial audio app for recording, transcribing, and geotagging voice memories on a map.",
+    learned: "Unified local/cloud storage and clean APIs matter as much as the map UI.",
+    tech: ["Python", "FastAPI", "PostgreSQL", "pgvector", "AWS S3"],
+    href: "https://github.com/rebeccachery/audio-memory-map",
   },
   {
-    title: "Interactive Maps",
-    description: "Interactive NYC map highlighting Haitian population density and educational support gaps using Census and NYC Open Data, built with React and Mapbox GL to visualize disparities and inform community advocacy efforts.",
-    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
-    tech: ["React", "Next.js", "Plotly", "JavaScript", "Data Visualization", "GeoJSON"],
-    githubUrl: "https://github.com/rebeccachery/nyc_map",
-    liveUrl: "https://github.com/rebeccachery/nyc_map"
+    num: "04",
+    title: "Play-by-Ear Music Instrument Tutor",
+    problem: "Learners need immediate feedback on pitch and rhythm without a teacher present.",
+    built: "An audio analysis pipeline for pitch tracking, melody alignment, and note-level scoring.",
+    learned: "Signal processing choices (pYIN, alignment) dominate perceived feedback quality.",
+    tech: ["Python", "Librosa", "NumPy", "SciPy", "Streamlit"],
+    href: "https://github.com/rebeccachery/play-by-ear-music-tutor",
   },
   {
-    title: "PolyFlow Demos",
-    description: "Demos showcasing PolyFlow's capabilities in multi-agent coordination, task planning, and LLM orchestration for complex workflows, including voice-based learning, automated flashcard generation, and lesson plan transformation.",
-    image: "https://images.pexels.com/photos/34804003/pexels-photo-34804003.jpeg",
-    tech: ["Python", "JavaScript", "LLM Orchestration", "Multi-Agent Systems", "Task Planning"],
-    githubUrl: "https://github.com/rebeccachery/polyflow-demo",
-    liveUrl: "https://github.com/rebeccachery/polyflow-demo"
-  }
+    num: "05",
+    title: "ISTWA",
+    problem: "Historical narratives rarely feel interactive or culturally grounded online.",
+    built: "An animated historical narrative experience framing the Haitian Revolution through story and design.",
+    learned: "Story, craft tooling, and web delivery have to move together for the piece to land.",
+    tech: ["Blender", "C", "Python", "WebGL", "After Effects"],
+    href: "https://istwa-site.vercel.app",
+  },
+  {
+    num: "06",
+    title: "SandwichBot",
+    problem: "Multi-step physical tasks are brittle when planning and control stay disconnected.",
+    built: "An autonomous robot using LLM-based task planning and vision under real manipulation constraints.",
+    learned: "Hardware forces you to respect failure modes that demos hide.",
+    tech: ["Python", "PyTorch", "Computer Vision", "LeRobot", "LLMs"],
+    href: "https://devpost.com/software/sandwichbot",
+  },
 ];
 
 export function Projects() {
   return (
-    <section id="projects" className="section">
-      <h2 className="section-title">Projects</h2>
-      
-      <div className="projects-grid">
-        {projects.map((project, index) => (
-          <div key={index} className="card project-card">
-            <div className="project-image-container">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="project-image"
-              />
-            </div>
-            <div className="project-content">
-              <h3>{project.title}</h3>
-              <p className="text-slate-600">{project.description}</p>
-              
-              <div className="skill-tags">
-                {project.tech.map((tech, techIndex) => (
-                  <span key={techIndex} className="tag">
-                    {tech}
-                  </span>
-                ))}
+    <section id="work" className="section">
+      <div className="section-header">
+        <p className="section-index">02 / Selected work</p>
+        <h2 className="section-title">Things I've built.</h2>
+        <p className="section-lead">
+          A curated archive — not every experiment, just the work that best shows how I think and ship.
+        </p>
+      </div>
+
+      <div className="work-list">
+        {projects.map((project) => {
+          const shared = (
+            <>
+              <span className="work-num">{project.num}</span>
+              <div className="work-body">
+                <h3 className="work-title">{project.title}</h3>
+                <div className="work-meta">
+                  <p>
+                    <strong>Problem</strong>
+                    {project.problem}
+                  </p>
+                  <p>
+                    <strong>Built</strong>
+                    {project.built}
+                  </p>
+                  <p>
+                    <strong>Learned</strong>
+                    {project.learned}
+                  </p>
+                </div>
+                <div className="work-tags">
+                  {project.tech.map((t) => (
+                    <span key={t} className="work-tag">
+                      {t}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-            <div className="project-actions">
+              <span className="work-link">View →</span>
+            </>
+          );
+
+          if (project.anchor) {
+            return (
               <a
-                className="btn btn-outline"
-                href={project.githubUrl}
-                target="_blank"
-                rel="noreferrer"
-                style={{ width: '100%' }}
-                aria-label={`View code for ${project.title}`}
+                key={project.title}
+                className="work-item"
+                href={`#${project.anchor}`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  scrollToId(project.anchor!);
+                }}
               >
-                <Github size={16} />
-                Code
+                {shared}
               </a>
-              <a
-                className="btn btn-outline"
-                href={project.liveUrl}
-                target="_blank"
-                rel="noreferrer"
-                style={{ width: '100%' }}
-                aria-label={`View live project for ${project.title}`}
-              >
-                <ExternalLink size={16} />
-                Live
-              </a>
-            </div>
-          </div>
-        ))}
+            );
+          }
+
+          return (
+            <a
+              key={project.title}
+              className="work-item"
+              href={project.href}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {shared}
+            </a>
+          );
+        })}
       </div>
     </section>
   );

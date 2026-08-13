@@ -1,66 +1,55 @@
-import { Calendar } from "lucide-react";
-
 const experiences = [
   {
-    title: "Contract Full-Stack Engineer",
-    company: "Consulting Clients (via TEKsystems & Upwork)",
-    period: "2023 - Present",
-    description: "Delivered end-to-end full-stack applications and AI-powered tools for nonprofits and mission-driven organizations, completing 15+ projects from ideation to production with consistent on-time delivery. Collaborated with RUXAILAB on AI-supported usability evaluation tooling for remote user testing, and built accessible WordPress platforms and custom digital solutions for advocacy and nonprofit organizations, including Out in Tech.",
-    skills: ["React", "TypeScript", "Python", "AWS", "Docker", "PostgreSQL", "Data Pipelines"]
+    role: "Founder",
+    org: "Polyflow",
+    period: "Apr 2026 – Present",
+    body: "Building AI speech infrastructure for under-resourced languages — datasets, production SaaS, and Echo for pronunciation practice. Grew a 1,000+ waitlist through interviews and early pilots.",
   },
   {
-    title: "Software Engineer Intern",
-    company: "WarnerMedia",
-    period: "2021 - 2021",
-    description: "Enhanced internal deployment tooling for the HBO Max platform, enabling live branch builds and continuous deployment workflows that reduced deployment request times by more than 50 minutes.",
-    skills: ["TypeScript", "Python", "AWS", "Node.js", "CI/CD", "Kubernetes"]
+    role: "Software Engineer (Contract)",
+    org: "TEKsystems & Independent Clients",
+    period: "Aug 2023 – Present",
+    body: "Led 15+ engagements from architecture to production — full-stack apps, AI tools, and cloud data pipelines that accelerated large-scale processing by 5×.",
   },
   {
-    title: "Software Development Engineer Intern",
-    company: "Amazon",
-    period: "2020 - 2020",
-    description: "Implemented a send-to-curator playlist feature for an internal playlist publishing platform, contributing to a 20% increase in playlist submissions within the first month.",
-    skills: ["Ruby on Rails", "React", "MySQL", "Redis", "REST APIs"]
+    role: "Software Engineer Intern",
+    org: "WarnerMedia",
+    period: "Jun – Aug 2021",
+    body: "Upgraded HBO Max deployment tooling for live branch builds and continuous deployment, cutting deployment request times by over 50 minutes.",
   },
   {
-    title: "Software Development Engineer Intern",
-    company: "Amazon",
-    period: "2019 - 2019",
-    description: "Developed scalable internal services for analyzing performance metrics across Amazon Music stations, enabling teams to better evaluate station quality and listener engagement.",
-    skills: ["Java","MySQL", "REST APIs", "Agile Methodologies", "Data Analytics"]
-  }
+    role: "Software Development Engineer Intern",
+    org: "Amazon / Amazon Music",
+    period: "2019 & 2020",
+    body: "Shipped a send-to-curator playlist feature (+20% submissions) and built services for music station performance metrics in Java and MySQL.",
+  },
 ];
 
 export function Experience() {
   return (
     <section id="experience" className="section">
-      <h2 className="section-title">Experience</h2>
-      
-      <div className="experience-list">
-        {experiences.map((exp, index) => (
-          <div key={index} className="card card-primary">
-            <div className="exp-header">
-              <div>
-                <h3>{exp.title}</h3>
-                <p className="text-slate-600">{exp.company}</p>
-              </div>
-              <div className="exp-period">
-                <Calendar size={16} />
-                <span>{exp.period}</span>
-              </div>
-            </div>
-            
-            <p>{exp.description}</p>
-            
-            <div className="skill-tags">
-              {exp.skills.map((skill, skillIndex) => (
-                <span key={skillIndex} className="tag">
-                  {skill}
-                </span>
-              ))}
-            </div>
-          </div>
+      <div className="section-header">
+        <p className="section-index">05 / Experience</p>
+        <h2 className="section-title">Where I've shipped.</h2>
+      </div>
+
+      <div className="timeline">
+        {experiences.map((exp) => (
+          <article key={`${exp.org}-${exp.period}`} className="timeline-item">
+            <h3 className="timeline-role">{exp.role}</h3>
+            <p className="timeline-org">{exp.org}</p>
+            <p className="timeline-period">{exp.period}</p>
+            <p>{exp.body}</p>
+          </article>
         ))}
+      </div>
+
+      <div className="education-block">
+        <div>
+          <h3>UC Berkeley</h3>
+          <p>B.S. Electrical Engineering & Computer Science · August 2023</p>
+        </div>
+        <p>Operating systems · Architecture · Embedded systems · Databases</p>
       </div>
     </section>
   );
